@@ -5,7 +5,7 @@ const lista= document.querySelector('ul');
 
 
 
-function hand(e) {
+function handlekeyup(e) {
     if (e.key === 'Enter') {
         
        //lista.innerHTML += '<li>' + input.value + '</li>';(prooblema de rendirecionamento dos itens)
@@ -13,13 +13,11 @@ function hand(e) {
        const newLi = document.createElement('li');
        newLi.innerHTML = input.value;
        lista.appendChild(newLi);
-       input.value  = '';
 
+       input.value  = ''; //para zerar o campo input
     }
-
 }
+//eventos 
 
-
-//eventos
-
-input.addEventListener('keyup',hand);
+input.addEventListener('keyup',handlekeyup);
+//git
